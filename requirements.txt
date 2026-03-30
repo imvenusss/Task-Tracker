@@ -1,0 +1,7 @@
+streamlit==1.32.0
+pandas>=2.0.0
+filelock>=3.13.0
+python-dateutil>=2.8.2
+huggingface_hub>=0.20.0
+numpy>=1.24
+streamlit-aggrid>=0.3.4.post3
