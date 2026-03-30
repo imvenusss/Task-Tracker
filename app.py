@@ -295,6 +295,19 @@ save_tasks(df_tasks)
 
 ALL_CATS = sorted([c for c in df_tasks["Category"].unique() if c])
 
+# ========= 資料來源狀態（側欄顯示） =========
+with st.sidebar.expander("📦 資料來源狀態", expanded=False):
+    if USE_DATASET:
+        st.success(
+            "✅ 使用 Hugging Face Dataset\n\n"
+            f"Repo：{os.environ.get('DATASET_REPO')}"
+        )
+    else:
+        st.warning(
+            "⚠️ 尚未連接 Hugging Face Dataset\n\n"
+            "目前使用本地 CSV 檔案"
+        )
+
 # ========== 📋 待辦清單 ==========
 if page == "📋 待辦清單":
     st.subheader("📋 待辦清單")
